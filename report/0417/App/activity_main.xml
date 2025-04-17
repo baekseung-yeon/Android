@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 이미지 -->
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <!-- 버튼 3개를 수직 정렬 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:id="@+id/btnIntroduction"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="INTRODUCTION"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="SETTINGS"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+</FrameLayout>
