@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:padding="10dp"/>
+
+    <!-- 이미지 위에 제목을 오버레이로 추가 -->
+    <TextView
+        android:id="@+id/imageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="박명수"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"/>
+</FrameLayout>
