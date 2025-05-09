@@ -30,7 +30,7 @@
  > > > > > > > > DrawingView.java        
  > > > > > > > > MainActivity.java       
  > > > > > > > /res
- > > > > > > > > /layout
+ > > > > > > > > > /layout
  > > > > > > > > > activity_main.xml
 
 ### 🎨색상 선택 버튼
