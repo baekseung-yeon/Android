@@ -32,7 +32,7 @@
  > > > > > > > /res
  > > > > > > > > > /layout
  > > > > > > > > > >activity_main.xml
-<br/>
+<br />
 ### 🎨색상 선택 버튼
 #### xml
 ``` xml
@@ -75,7 +75,7 @@ btnBlue.setOnClickListener(new View.OnClickListener() {
 });
 
 ```
-<br/>
+<br />
 ### 🧽지우개 버튼
 #### xml
 ``` xml
@@ -106,7 +106,7 @@ public void setEraserMode(boolean eraserMode) {
     }
 }
 ```
-<br/>
+<br />
 ### 🗑️초기화 버튼
 #### xml
 ``` xml
@@ -132,7 +132,7 @@ public void clearDrawing() {
     invalidate();  // 화면 갱신
 }
 ```
-<br/>
+<br />
 ### 🖊️🖊펜 굵기 조정 
 #### xml
 ``` xml
