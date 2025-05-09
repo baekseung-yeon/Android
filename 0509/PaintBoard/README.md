@@ -42,18 +42,49 @@
             drawingView.setPenColor(Color.BLACK); // 검정색
         }
     });
-
     btnRed.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             drawingView.setPenColor(Color.RED); // 빨간색
         }
     });
-
     btnBlue.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             drawingView.setPenColor(Color.BLUE); // 파란색
+        }
+    });
+</code></pre>
+
+<h3>🧽지우개 버튼</h2>
+<pre><code>
+    btnBlack.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.setPenColor(Color.BLACK); // 검정색
+        }
+    });
+    btnRed.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.setPenColor(Color.RED); // 빨간색
+        }
+    });
+    btnBlue.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.setPenColor(Color.BLUE); // 파란색
+        }
+    });
+</code></pre>
+
+<h>🗑️초기화 버튼</h2>
+
+<pre><code>
+    btnClear.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.clear(); // 그린 모든 그림 초기화
         }
     });
 </code></pre>
