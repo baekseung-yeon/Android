@@ -32,7 +32,9 @@
  > > > > > > > /res
  > > > > > > > > > /layout
  > > > > > > > > > >activity_main.xml
+
 <br />
+
 ### 🎨색상 선택 버튼
 #### xml
 ``` xml
@@ -76,6 +78,7 @@ btnBlue.setOnClickListener(new View.OnClickListener() {
 
 ```
 <br />
+
 ### 🧽지우개 버튼
 #### xml
 ``` xml
