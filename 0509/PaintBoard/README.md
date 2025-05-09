@@ -31,5 +31,19 @@
  > > > > > > > > MainActivity.java       
  > > > > > > > /res
  > > > > > > > > /layout
- > > > > > > > > > activity_main.xml       
+ > > > > > > > > > activity_main.xml
+
+
+``` xml
+<Button
+    android:id="@+id/btnBlack"
+    android:text="검정" />
+<Button
+    android:id="@+id/btnRed"
+    android:text="빨강" />
+<Button
+    android:id="@+id/btnBlue"
+    android:text="파랑" />
+```
+
 
