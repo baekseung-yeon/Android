@@ -1,4 +1,4 @@
-# 할 일 목록 앱 (To-Do List App)
+# 📖할 일 목록 앱
 
 이 앱은 사용자가 할 일을 추가하고, 각 할 일에 날짜와 시간을 설정할 수 있도록 도와주는 간단한 투두 리스트 애플리케이션입니다. 사용자는 할 일을 추가하고, 할 일이 완료되면 체크박스를 선택하여 완료 상태로 변경할 수 있습니다. 또한 각 항목은 삭제할 수 있습니다.
 
@@ -30,7 +30,7 @@
 
 ## 코드 설명
 
-### 날짜 선택 
+### 📅날짜 선택 
 
 ```java
 btnSelectDate.setOnClickListener(v -> {
@@ -47,7 +47,7 @@ btnSelectDate.setOnClickListener(v -> {
 
 ```
 
-### 시간 선택 
+### ⏰시간 선택 
 
 ```java
 btnSelectTime.setOnClickListener(v -> {
@@ -62,7 +62,7 @@ btnSelectTime.setOnClickListener(v -> {
 });
 ```
 
-### 리스트 추가 
+### ➕리스트 추가 
 
 ```java
 btnAddTask.setOnClickListener(v -> {
@@ -77,7 +77,7 @@ btnAddTask.setOnClickListener(v -> {
 });
 ```
 
-### 리스트 체크박스
+### ✅리스트 체크박스
 
 ```java
 checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -92,7 +92,7 @@ checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
 });
 ```
 
-### 리스트 삭제
+### 🗑️리스트 삭제
 
 ```java
 btnDelete.setOnClickListener(v -> {
