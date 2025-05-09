@@ -4,55 +4,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- 메뉴 버튼 -->
+    <Button
+        android:id="@+id/btnToggleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메뉴 열기/닫기" />
+
+    <!-- 메뉴 레이아웃 (처음엔 숨김) -->
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#EEEEEE"
+        android:padding="8dp">
+
+        <!-- 굵기 조절 -->
+        <SeekBar
+            android:id="@+id/brushSizeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="10" />
+
+        <!-- 버튼 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnBlack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="검정" />
+
+            <Button
+                android:id="@+id/btnRed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="빨강" />
+
+            <Button
+                android:id="@+id/btnBlue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="파랑" />
+
+            <Button
+                android:id="@+id/btnEraser"
+                android:layout_width="dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="지우개" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="초기화" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 그림 그리는 뷰 -->
     <com.example.myapplication.DrawingView
         android:id="@+id/drawingView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#FFFFFF" />
-
-    <SeekBar
-        android:id="@+id/brushSizeSeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="100"
-        android:progress="10" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btnBlack"
-            android:layout_width="76dp"
-            android:layout_height="wrap_content"
-            android:text="검정" />
-
-        <Button
-            android:id="@+id/btnRed"
-            android:layout_width="76dp"
-            android:layout_height="wrap_content"
-            android:text="빨강" />
-
-        <Button
-            android:id="@+id/btnBlue"
-            android:layout_width="76dp"
-            android:layout_height="wrap_content"
-            android:text="파랑" />
-
-        <Button
-            android:id="@+id/btnEraser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="지우개" />
-
-        <Button
-            android:id="@+id/btnClear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="초기화" />
-    </LinearLayout>
-
 </LinearLayout>
