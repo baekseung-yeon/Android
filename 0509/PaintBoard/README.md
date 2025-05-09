@@ -32,10 +32,6 @@
             /res
                 /layout
                     activity_main.xml          # 레이아웃 XML
-                /values
-                    colors.xml                # 색상 정의
-                    styles.xml                # 스타일 정의
-                    themes.xml                # 테마 정의
 </code></pre>
 
 
