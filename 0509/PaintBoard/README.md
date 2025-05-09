@@ -34,4 +34,29 @@
                     activity_main.xml          # 레이아웃 XML
 </code></pre>
 
+<h3>🎨색상 버튼</h2>
+<pre><code>
+    btnBlack.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.setPenColor(Color.BLACK); // 검정색
+        }
+    });
+
+    btnRed.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.setPenColor(Color.RED); // 빨간색
+        }
+    });
+
+    btnBlue.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            drawingView.setPenColor(Color.BLUE); // 파란색
+        }
+    });
+</code></pre>
+
+
 
