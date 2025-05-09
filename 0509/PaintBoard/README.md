@@ -25,12 +25,12 @@
  > > > /main
  > > > > /java
  > > > > > /com
-                    /example
-                        /myapplication
-                            DrawingView.java         # 그리기 기능 구현
-                            MainActivity.java        # 메인 액티비티
-            /res
-                /layout
-                    activity_main.xml          # 레이아웃 XML
+ > > > > > > /example
+ > > > > > > > /myapplication
+ > > > > > > > > DrawingView.java         # 그리기 기능 구현
+ > > > > > > > > MainActivity.java        # 메인 액티비티
+ > > > > > > /res
+ > > > > > > > /layout
+ > > > > > > > > activity_main.xml          # 레이아웃 XML
 
 
