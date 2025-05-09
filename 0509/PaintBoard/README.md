@@ -31,7 +31,7 @@
  > > > > > > > > MainActivity.java       
  > > > > > > > /res
  > > > > > > > > > /layout
- > > > > > > > > > activity_main.xml
+ > > > > > > > > > >activity_main.xml
 
 ### 🎨색상 선택 버튼
 #### xml
