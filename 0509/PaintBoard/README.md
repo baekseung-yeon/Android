@@ -33,7 +33,8 @@
  > > > > > > > > /layout
  > > > > > > > > > activity_main.xml
 
-
+### 🎨색상 선택 버튼
+#### xml
 ``` xml
 <Button
     android:id="@+id/btnBlack"
@@ -44,6 +45,35 @@
 <Button
     android:id="@+id/btnBlue"
     android:text="파랑" />
+```
+#### java
+``` java
+// 색상 버튼 클릭 리스너 처리
+Button btnBlack = findViewById(R.id.btnBlack);
+Button btnRed = findViewById(R.id.btnRed);
+Button btnBlue = findViewById(R.id.btnBlue);
+
+btnBlack.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        drawingView.setPenColor(Color.BLACK);  // 검정색 설정
+    }
+});
+
+btnRed.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        drawingView.setPenColor(Color.RED);    // 빨간색 설정
+    }
+});
+
+btnBlue.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        drawingView.setPenColor(Color.BLUE);   // 파란색 설정
+    }
+});
+
 ```
 
 
