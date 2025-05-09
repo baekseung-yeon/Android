@@ -110,6 +110,7 @@ public void setEraserMode(boolean eraserMode) {
 }
 ```
 <br />
+
 ### 🗑️초기화 버튼
 #### xml
 ``` xml
@@ -136,6 +137,7 @@ public void clearDrawing() {
 }
 ```
 <br />
+
 ### 🖊️🖊펜 굵기 조정 
 #### xml
 ``` xml
