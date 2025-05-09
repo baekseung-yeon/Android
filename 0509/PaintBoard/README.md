@@ -29,7 +29,7 @@
  > > > > > > > /myapplication
  > > > > > > > > DrawingView.java        
  > > > > > > > > MainActivity.java       
- > > > > > > /res
- > > > > > > > /layout
- > > > > > > > > activity_main.xml       
+ > > > > > > > /res
+ > > > > > > > > /layout
+ > > > > > > > > > activity_main.xml       
 
