@@ -19,7 +19,7 @@
 </ol>
 
 <h2>📌파일 구조</h2>
-<pre><code>
+
  >/app
  > > src
  > > > /main
@@ -32,8 +32,5 @@
             /res
                 /layout
                     activity_main.xml          # 레이아웃 XML
-</code></pre>
-
-<
 
 
