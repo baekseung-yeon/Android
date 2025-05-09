@@ -75,5 +75,93 @@ btnBlue.setOnClickListener(new View.OnClickListener() {
 });
 
 ```
+### 🧽지우개 버튼
+#### xml
+``` xml
+<Button
+    android:id="@+id/btnEraser"
+    android:text="지우개" />
+```
+#### java
+``` java
+// 지우개 버튼 클릭 리스너 처리
+Button btnEraser = findViewById(R.id.btnEraser);
+btnEraser.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        drawingView.setEraserMode(true);  // 지우개 모드 활성화
+    }
+});
+```
+#### DrawingView.java
+``` java
+public void setEraserMode(boolean eraserMode) {
+    if (eraserMode) {
+        paint.setColor(Color.WHITE);  // 지우개 모드일 때 색을 흰색으로 설정
+        paint.setStrokeWidth(30);     // 지우개 크기 설정
+    } else {
+        paint.setColor(penColor);     // 기존 펜 색상 복구
+        paint.setStrokeWidth(penSize); // 기존 펜 크기 복구
+    }
+}
+```
+### 🗑️초기화 버튼
+#### xml
+``` xml
+<Button
+    android:id="@+id/btnClear"
+    android:text="초기화" />
+```
+#### java
+``` java
+// 초기화 버튼 클릭 리스너 처리
+Button btnClear = findViewById(R.id.btnClear);
+btnClear.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        drawingView.clearDrawing();  // 그리기 초기화
+    }
+});
+```
+#### DrawingView.java
+``` java
+public void clearDrawing() {
+    path.reset();  // 경로 초기화
+    invalidate();  // 화면 갱신
+}
+```
+### 🖊️🖊펜 굵기 조정 
+#### xml
+``` xml
+<SeekBar
+    android:id="@+id/brushSizeSeekBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="100"
+    android:progress="10" />
+```
+#### java
+``` java
+// SeekBar 리스너 추가
+SeekBar brushSizeSeekBar = findViewById(R.id.brushSizeSeekBar);
+brushSizeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        drawingView.setPenSize(progress);  // 펜 굵기 설정
+    }
 
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {}
 
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {}
+});
+```
+#### DrawingView.java
+``` java
+public void setPenSize(float size) {
+    penSize = size;
+    paint.setStrokeWidth(penSize);  // 펜 굵기 적용
+    invalidate();  // 화면 갱신
+}
+```
