@@ -39,10 +39,10 @@ BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 
 ## 사용 방법
 
-앱 실행
-👇
-메모 입력
-👇
-저장 버튼 클릭 → 내부 저장소에 memo.txt 저장
-👇
-불러오기 버튼 클릭 → memo.txt 내용을 EditText에 표시
+앱 실행 <br>
+👇 <br>
+메모 입력 <br>
+👇 <br>
+저장 버튼 클릭 → 내부 저장소에 memo.txt 저장 <br>
+👇 <br>
+불러오기 버튼 클릭 → memo.txt 내용을 EditText에 표시 <br>
