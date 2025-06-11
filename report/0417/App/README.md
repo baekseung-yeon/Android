@@ -11,14 +11,22 @@
 
 ## 주요 기능
 
-- **메인 화면**  
-  배경 이미지 위에 3개의 버튼을 수직으로 배치하여 각 기능 화면으로 이동 가능  
-- **Introduction 화면**  
-  간단한 소개 텍스트 표시  
-- **Settings 화면**  
-  설정 관련 내용을 표시하는 화면 (예시 텍스트만 있음)  
-- **Start 화면**  
-  시작 화면으로, 실제 동작에 앞서 준비 화면 역할 (예시 텍스트만 있음)  
+## 📱 주요 기능
+
+- **메인 화면 (`MainActivity`)**
+  - 배경 이미지와 함께 세 개의 버튼 제공:
+    - `INTRODUCTION`: 앱 소개 페이지로 이동
+    - `SETTINGS`: 설정 페이지로 이동
+    - `START`: 시작 페이지로 이동
+
+- **소개 페이지 (`MainActivity2`)**
+  - 텍스트 `"Introduction Page"` 표시
+
+- **설정 페이지 (`MainActivity3`)**
+  - 텍스트 `"Settings Page"` 표시
+
+- **시작 페이지 (`MainActivity4`)**
+  - 텍스트 `"Start Page"` 표시
 
 ---
 
@@ -27,9 +35,9 @@
 | 화면명           | 액티비티 클래스           | 레이아웃 파일               | 설명                          |
 |------------------|--------------------------|----------------------------|-------------------------------|
 | MainActivity     | `MainActivity.java`       | `activity_main.xml`         | 배경 이미지 + 3개의 버튼 구성  |
-| Introduction     | `IntroductionActivity.java`| `activity_introduction.xml` | 소개 페이지, 텍스트 출력       |
-| Settings         | `SettingsActivity.java`    | `activity_settings.xml`     | 설정 페이지, 텍스트 출력       |
-| Start            | `StartActivity.java`       | `activity_start.xml`        | 시작 페이지, 텍스트 출력       |
+| Introduction     | `MainActivity2.java`| `activity_main2.xml` | 소개 페이지, 텍스트 출력       |
+| Settings         | `MainActivity3.java`    | `activity_main3.xml`     | 설정 페이지, 텍스트 출력       |
+| Start            | `MainActivity4.java`       | `activity_main4.xml`        | 시작 페이지, 텍스트 출력       |
 
 ---
 
@@ -88,15 +96,15 @@
 
 ```java
 btnIntroduction.setOnClickListener(v ->
-    startActivity(new Intent(this, IntroductionActivity.class))
+    startActivity(new Intent(this, MainActivity2.class))
 );
 
 btnSettings.setOnClickListener(v ->
-    startActivity(new Intent(this, SettingsActivity.class))
+    startActivity(new Intent(this, MainActivity3.class))
 );
 
 btnStart.setOnClickListener(v ->
-    startActivity(new Intent(this, StartActivity.class))
+    startActivity(new Intent(this, MainActivity4.class))
 );
 ```
 
@@ -119,8 +127,8 @@ btnStart.setOnClickListener(v ->
     </intent-filter>
 </activity>
 
-<activity android:name=".IntroductionActivity" />
-<activity android:name=".SettingsActivity" />
-<activity android:name=".StartActivity" />
+<activity android:name=".MainActivity2" />
+<activity android:name=".MainActivity3" />
+<activity android:name=".MainActivity4" />
 ```
 
