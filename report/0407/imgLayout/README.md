@@ -23,8 +23,8 @@
 ## 📂 리소스 구성
 
 res/ <br>
- └── drawable/ <br>
-      └── example_image.png <br>
+ &nbsp; └── drawable/ <br>
+ &nbsp; &nbsp; └── example_image.png <br>
 
 ---
 
