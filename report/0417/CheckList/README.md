@@ -41,7 +41,7 @@ ArrayAdapter<String> adapter;
 - 입력창(etTask)에 내용이 있을 경우:
   - tasks 리스트에 추가
   - notifyDataSetChanged()로 리스트뷰 업데이트
-  - 
+
 ```java
  btnAdd.setOnClickListener(new View.OnClickListener() {
     @Override
