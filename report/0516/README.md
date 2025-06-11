@@ -74,10 +74,11 @@ public class Snowflake {
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>
+
+```
 - /res/drawable/snow.png 또는 snow.jpg
   - 눈 내리는 배경 이미지가 필요
   - 코드에서 BitmapFactory.decodeResource(getResources(), R.drawable.snow)로 로드됩니다.
-```
 ---
 
 ## 실행 결과 
