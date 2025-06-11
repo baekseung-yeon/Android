@@ -24,12 +24,34 @@
 - 버튼 클릭 시 입력값을 리스트에 추가하고 화면 갱신
   
 ```java
-btnAdd.setOnClickListener(v -> {
-    String newTask = etTask.getText().toString().trim();
-    if (!newTask.isEmpty()) {
-        tasks.add(newTask);           // 리스트에 추가
-        adapter.notifyDataSetChanged(); // 화면 갱신
-        etTask.setText("");           // 입력창 비우기
+EditText etTask;
+Button btnAdd;
+ListView listView;
+ArrayList<String> tasks;
+ArrayAdapter<String> adapter;
+```
+## 🧠 동작 설명
+
+##1. 초기화 
+- ArrayList<String>를 이용해 할 일 목록을 저장
+- ArrayAdapter로 리스트뷰에 데이터 연결
+- 리스트뷰는 CHOICE_MODE_MULTIPLE로 설정하여 여러 항목 체크 가능
+
+  ##2. 버튼 클릭 시
+- 입력창(etTask)에 내용이 있을 경우:
+  - tasks 리스트에 추가
+  - notifyDataSetChanged()로 리스트뷰 업데이트
+  - 
+```java
+ btnAdd.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        String newTask = etTask.getText().toString().trim();
+        if (!newTask.isEmpty()) {
+            tasks.add(newTask);
+            adapter.notifyDataSetChanged();
+            etTask.setText("");
+        }
     }
 });
 ```
