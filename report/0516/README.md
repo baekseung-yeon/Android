@@ -27,13 +27,13 @@ public class SnowView extends SurfaceView implements SurfaceHolder.Callback, Run
     ...
 }
 ```
-##핵심 역할
+### 핵심 역할
 
 - SurfaceView를 상속받아 별도의 쓰레드에서 그림을 반복적으로 그립니다.
 - 눈송이 100개를 생성하고, 매 프레임마다 위치를 업데이트해 아래로 떨어지게 만듭니다.
 - drawScene() 메서드에서 배경 이미지와 눈송이를 그림.
 
-##주요 메서드
+### 주요 메서드
 
 - surfaceCreated: 뷰가 준비되면 눈송이 초기화 및 쓰레드 시작
 - run: 60fps 속도로 반복적으로 drawScene() 호출
@@ -42,7 +42,7 @@ public class SnowView extends SurfaceView implements SurfaceHolder.Callback, Run
 
 --- 
 
-###3. `Snowflake.java`
+### 3. `Snowflake.java`
 ```java
 public class Snowflake {
     public float x, y, radius, speedY;
@@ -66,7 +66,7 @@ public class Snowflake {
 
 ---
 
-###4. `activity_main.xml`
+### 4. `activity_main.xml`
 ```xml
 <RelativeLayout>
     <com.example.snowyscene.SnowView
@@ -77,7 +77,7 @@ public class Snowflake {
 - /res/drawable/snow.png 또는 snow.jpg
   - 눈 내리는 배경 이미지가 필요
   - 코드에서 BitmapFactory.decodeResource(getResources(), R.drawable.snow)로 로드됩니다.
-
+```
 ---
 
 ### 실행 결과 
