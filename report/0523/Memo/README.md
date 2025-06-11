@@ -198,8 +198,6 @@ public class MainActivity extends AppCompatActivity {
 
 ## 🧱 activity_main.xml
 
-## 🎨 activity_main.xml 구성 설명
-
 | 요소 ID          | 설명                                                                 |
 |------------------|----------------------------------------------------------------------|
 | `titleTextView`  | 상단 제목 "메모장"을 표시하는 TextView, 배경색은 짙은 회색, 글씨는 흰색 |
