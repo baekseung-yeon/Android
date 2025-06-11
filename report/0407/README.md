@@ -14,6 +14,7 @@
 | `LinearLayout`       | 수직 또는 수평 방향으로 요소 정렬 |
 | `RelativeLayout`     | 요소 간 상대적인 위치 관계 지정 |
 | `TableLayout`        | 테이블 형태로 뷰를 정렬 |
+| `ImageLayout.xml`      | 이미지 중심의 레이아웃 구성 |
 
 ---
 
@@ -56,6 +57,11 @@
 - 각 `TableRow`에 항목 배치
 - 폼 기반 입력 UI에 자주 사용됨
 
+- ### 5. `ImageLayout`
+- 대표 이미지, 갤러리, 제품 썸네일 등 시각 콘텐츠 표시용으로 적합
+- scaleType, contentDescription 등 시각적 배치와 접근성 요소 설정 가능
+- 반적으로 LinearLayout, ConstraintLayout 등과 조합하여 사용
+  
 ---
 
 ## 🔧 사용 방법
