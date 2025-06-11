@@ -55,8 +55,6 @@ Android에서 앱의 **내부 저장소**는 외부에서 접근할 수 없는 �
 
 ## 📂 MainActivity.java
 
-## 📂 `MainActivity.java` 설명
-
 ### 1. 변수 및 초기 설정
 ```java
 private static final String FILE_NAME = "note.txt";
