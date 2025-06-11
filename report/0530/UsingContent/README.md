@@ -65,3 +65,134 @@
 - button_permission.xml: 권한 요청용 주황색 계열 색상
 
 ---
+
+### 🧑‍💻 MainActivity.java 설명
+
+```java
+// 이미지 탐색을 위한 현재 인덱스와 리스트 선언
+private List<ImageInfo> imageList;
+private int currentImageIndex = 0;
+
+// onCreate()에서 초기 UI와 권한 확인 실행
+protected void onCreate(Bundle savedInstanceState) {
+    initializeViews(); // 버튼, 텍스트 등 초기화
+    setupPermissions(); // Android 버전에 따라 권한 배열 설정
+    checkAndRequestPermissions(); // 권한 체크 및 요청
+}
+
+// 이미지 표시 함수
+private void displayCurrentImage() {
+    // 현재 이미지 정보를 기반으로 ImageView에 표시
+    // 파일 크기, 이름 등의 정보를 TextView에 출력
+}
+
+// 이미지 새로고침 함수
+public void refreshImages(View v) {
+    checkAndRequestPermissions(); // 권한 재확인 후 이미지 다시 로딩
+}
+
+// 권한 요청 결과 처리
+public void onRequestPermissionsResult(...) {
+    if (모든 권한 허용) {
+        loadAllImages(); // 이미지 로딩
+    } else {
+        사용자에게 권한 거부 메시지 출력
+    }
+}
+
+```
+---
+
+### 🖼️ activity_main.xml 설명
+
+```xml
+<LinearLayout>
+    <!-- 상단 탐색 버튼 -->
+    <Button android:id="@+id/previous" ... />
+    <Button android:id="@+id/next" ... />
+
+    <!-- 이미지 정보 텍스트 -->
+    <TextView android:id="@+id/imageCounter" ... />
+    <TextView android:id="@+id/imageInfo" ... />
+
+    <!-- 이미지 표시 영역 -->
+    <ImageView android:id="@+id/picture" ... />
+
+    <!-- 하단 제어 버튼 -->
+    <Button android:id="@+id/refreshButton" ... />
+    <Button android:id="@+id/permissionButton" ... />
+</LinearLayout>
+```
+- previous, next 버튼은 이미지 이동
+- refreshButton: 이미지 리스트 새로고침
+- permissionButton: 권한 재요청 (초기에는 숨겨짐)
+
+---
+
+### 🎨 버튼 배경 XML 설명 (res/drawable)
+button_refresh.xml
+```xml
+<selector>
+  <item android:state_pressed="true">
+    <shape><solid android:color="#388e3c"/></shape>
+  </item>
+  <item>
+    <shape><solid android:color="#4caf50"/></shape>
+  </item>
+</selector>
+```
+- 새로고침 버튼의 눌림/기본 상태 색상 정의
+  
+button_previous.xml, button_next.xml
+```xml
+<selector>
+  <item android:state_enabled="false">
+    <shape><solid android:color="#cccccc"/></shape>
+  </item>
+  <item android:state_pressed="true">
+    <shape><solid android:color="#1976d2"/></shape>
+  </item>
+  <item>
+    <shape><solid android:color="#2196f3"/></shape>
+  </item>
+</selector>
+```
+- 새로고침 버튼의 눌림/기본 상태 색상 정의
+
+button_permission.xml
+
+```xml
+<selector>
+  <item android:state_pressed="true">
+    <shape><solid android:color="#f57c00"/></shape>
+  </item>
+  <item>
+    <shape><solid android:color="#ff9800"/></shape>
+  </item>
+</selector>
+```
+- 권한 요청 버튼용 오렌지 계열 상태 정의
+
+---
+
+### 🎨 AndroidManifest.xml 설정
+```xml
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+                 android:maxSdkVersion="32" />
+
+<application ... android:requestLegacyExternalStorage="true">
+  <activity android:name=".MainActivity" ... >
+    <intent-filter>
+      <action android:name="android.intent.action.MAIN" />
+      <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+  </activity>
+</application>
+
+```
+
+### ✅ 실행 예시
+- 앱 실행 시 권한 허용 여부에 따라 자동 동작 또는 수동 요청
+- 이미지가 있을 경우 이미지 + 정보 표시
+- 이미지 없을 경우 안내 메시지 출력
