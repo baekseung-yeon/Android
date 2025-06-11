@@ -24,7 +24,7 @@
 
 res/ <br>
  &nbsp; └── drawable/ <br>
- &nbsp; &nbsp; └── example_image.png <br>
+ &nbsp; &nbsp; &nbsp; &nbsp; └── example_image.png <br>
 
 ---
 
