@@ -52,7 +52,7 @@
         android:src="@drawable/image0"/>
 </LinearLayout>
 ```
-## Java 코 (`MainActivity.java`)
+## Java 코드 (`MainActivity.java`)
 
 ```java 
 public class MainActivity extends AppCompatActivity {
