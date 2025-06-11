@@ -15,9 +15,7 @@
 ## 🛠️ 개발 환경
 
 - **언어**: Java  
-- **IDE**: Android Studio  
-- **minSdkVersion**: 21  
-- **targetSdkVersion**: 33  
+- **IDE**: Android Studio 
 
 ---
 
