@@ -4,6 +4,22 @@
 
 ---
 
+## RadioButton이란?
+
+**RadioButton**은 안드로이드에서 **여러 항목 중 하나만 선택할 수 있게 해주는 UI 요소**입니다. 사용자는 한 번에 하나의 옵션만 선택할 수 있으며, 보통 `RadioGroup` 안에 묶어서 사용합니다.
+
+---
+
+## 예시
+
+```xml
+<RadioGroup android:id="@+id/radioGroup">
+    <RadioButton android:id="@+id/radio1" android:text="옵션 1"/>
+    <RadioButton android:id="@+id/radio2" android:text="옵션 2"/>
+    <RadioButton android:id="@+id/radio3" android:text="옵션 3"/>
+</RadioGroup>
+```
+
 ## 📱 주요 기능
 
 - 안드로이드 버전 선택 (`RadioButton`)
