@@ -22,9 +22,9 @@
 
 ## 📂 리소스 구성
 
-res/
- └── drawable/
-      └── example_image.png
+res/<nbr>
+ └── drawable/<nbr>
+      └── example_image.png<nbr>
 
 ---
 
