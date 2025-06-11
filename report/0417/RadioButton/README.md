@@ -20,6 +20,8 @@
 </RadioGroup>
 ```
 
+---
+
 ## 📱 주요 기능
 
 - 안드로이드 버전 선택 (`RadioButton`)
